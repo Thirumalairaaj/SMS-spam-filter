@@ -4,7 +4,7 @@ import pandas as pd
 import nltk
 import string
 
-'''Fetching and adding column name to the sample dataset (.txt file) of spam and ham messages'''
+'''Fetching and adding column name to the sample dataset (.txt file) of spam & ham messages '''
 
 data = pd.read_csv(r"E:\PY\spam_set.txt",sep="\t",header=None,names=['label','message'])
 
