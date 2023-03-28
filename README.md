@@ -21,9 +21,9 @@ import string
 ```
 ### To read the dataset
 ```python
-data = pd.read_csv(r".../spam_set.txt",sep="\t",header=None,names=['label','message']')
+data = pd.read_csv(r"...\spam_set.txt",sep="\t",header=None,names=['label','message']')
 ```
-sep is a argument that accepts the delimiters. names is an another argument that accepts iterable data to name the columns of dataset. 
+sep is a argument that accepts the delimiters names is an another argument that accepts iterable data to name the columns of dataset. 
 
 ### To display top few data from the dataset
 ```python
@@ -40,10 +40,29 @@ print(data.head())
 stop_words = nltk.corpus.stopwords.words('english')
 punc = string.punctuation
 ```
+### Applying NLP Techniques
+```python
+processed = "".join([word.lower() for word in text if word not in punc])
+tokens = nltk.tokenize.word_tokenize(processed)
+processed = [word for word in tokens if word not in stop_words]
+```
+### Classification of data
+```python
+spam_words = []
+ham_words = []
+for words in data['processed'][data['label'] == 'spam']:
+    for word in words:
+         spam_words.append(word)
+for words in data['processed'][data['label'] == 'ham']:
+    for word in words:
+          ham_words.append(word)
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
+## Find me on
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Profile-informational?style=flat&logo=linkedin&logoColor=white&color=0D76A8)](https://www.linkedin.com/in/thirumalairaaj-c-v-b05036224)
