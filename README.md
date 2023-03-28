@@ -31,9 +31,9 @@ print(data.head())
 ```
 ### To Download the required nltk sub packages
 ```python
->>> import nltk
->>> nltk.download('stopwords')
->>> nltk.download('punkt')
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 ```
 ### To use Stop words and punctuations
 ```python
