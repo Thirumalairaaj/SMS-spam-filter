@@ -1,3 +1,5 @@
+'''@author Thirumalairaaj'''
+
 #Sms Spam filter
 
 import pandas as pd
@@ -6,7 +8,7 @@ import string
 
 '''Fetching and adding column name to the sample dataset (.txt file) of spam & ham messages '''
 
-data = pd.read_csv(r"E:\PY\spam_set.txt",sep="\t",header=None,names=['label','message'])
+data = pd.read_csv(r"https://github.com/Thirumalairaaj/SMS-spam-filter/blob/main/spam_set.txt",sep="\t",header=None,names=['label','message'])
 
 '''get corpus text of stop words in english language
 initialize punctuations to process the data'''
